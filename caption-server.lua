@@ -242,13 +242,6 @@ vocab = checkpoint.vocab-- ix -> word mapping
 -------------------------------------------------------------------------------
 -- Create the Data Loader instance
 -------------------------------------------------------------------------------
--- local loader
---if string.len(opt.image_folder) == 0 then
---  print("Loading from the h5 fs")
---  loader = DataLoader{h5_file = opt.input_h5, json_file = opt.input_json}
---else
---  loader = DataLoaderRaw{folder_path = opt.image_folder, coco_json = opt.coco_json}
---end
 uploadFile = "/home/tempuser/neuraltalk2-rest-test/output1.jpg"
 os.execute("touch "..uploadFile) -- TODO- for now, atleast one file is needed, fix this 
 loader = DataLoaderRaw{folder_path = opt.image_folder, coco_json = opt.coco_json}
